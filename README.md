@@ -1,11 +1,6 @@
-# gulp-stack
-Gulp JS stack of tools
-
-In your project directory:
-
-to get project dependencies:
-npm install
-bower install
-
-to init project:
-gulp watch
+# build-kit
+- Gulp JS stack of tools
+- Project Directory setup
+- Sass setup
+- Common use case functions library
+- Placeholder image example
