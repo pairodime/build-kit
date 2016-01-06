@@ -1,3 +1,6 @@
+<?php
+$hostname = getenv('HTTP_HOST');
+?>
 <!doctype html>
 <html>
     <head>
