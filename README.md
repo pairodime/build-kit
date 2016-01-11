@@ -4,7 +4,14 @@
 - Sass setup
 - Custom code tools
 - Placeholder image example
-- 
+
+#Placeholder Images
+- <img src="http://placehold.it/350x150">
+
+
+#Base path to project
+- $hostname = getenv('HTTP_HOST');
+
 #Node Packages
 - Basic npm install
 
