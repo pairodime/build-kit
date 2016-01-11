@@ -6,7 +6,8 @@
 - Placeholder image example
 
 #Placeholder Images
-- <img src="http://placehold.it/350x150">
+<img src="http://placehold.it/350x150">
+- Declare your own width and height in image url
 
 
 #Base path to project
