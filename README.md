@@ -4,7 +4,12 @@
 - Sass setup
 - Custom code tools
 - Placeholder image example
+- 
+#Node Packages
+- Basic npm install
 
+#Bower Packages
+- Basic bower install
 
 #CSS Stats
 Use to test elements for consistent css attributes.  
