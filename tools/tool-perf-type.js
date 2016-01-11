@@ -62,7 +62,7 @@ $(document).ready(function(){
 					greaterThan();
 			});
 	};
-													//tag, base, increment, min, max
+											//tag, base, increment, min, max
 	var heading1   = new PerfType('h1', 26, 0.06, 320, 768);
 	var heading2   = new PerfType('h2', 24, 0.3, 320, 768);
 	var heading3   = new PerfType('h3', 22, 0.4, 320, 768);
