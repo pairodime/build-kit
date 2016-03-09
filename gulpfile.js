@@ -5,7 +5,8 @@ var gulp 			 	 = require('gulp'),
 	autoprefixer 	 = require('gulp-autoprefixer'),
 	sass 			   	 = require('gulp-sass'),
   sourcemaps     = require('gulp-sourcemaps'),
-  livereload     = require('gulp-livereload');
+  livereload     = require('gulp-livereload'),
+  babel          = require('gulp-babel');
 
 // Minify JS for Production
 gulp.task('js', function() {
@@ -23,7 +24,12 @@ gulp.task('css', function () {
 
 // Changes to Javascript files- DO SOMETHING
 gulp.task('js-watch', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('js/src/*.js')
+    // ECMA6 -> ECMA5 = Babeltron
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('js'))
     // Livereload
     .pipe(livereload());
 });
@@ -80,6 +86,6 @@ gulp.task('watch', ['sass'], function () {
 gulp.task('watch', ['sass', 'js-watch', 'static-watch'], function () {
    livereload.listen();
    gulp.watch('css/scss/*.scss', ['sass']);
-   gulp.watch('js/*.js', ['js-watch']);
+   gulp.watch(['js/*.js', 'js/src/*.js'], ['js-watch']);
    gulp.watch(['*.html', '*.php'], ['static-watch']);
 });
